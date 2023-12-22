@@ -19,7 +19,7 @@ const {
 }
 */
 
-async function transformImageDramix() {
+export async function transformImageDramix() {
     // on charge l'image
     let image = await Image.load('otter_banana.png');
     // on dilate Dramix
