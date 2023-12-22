@@ -12,9 +12,9 @@ import { transformImageDramix } from 'dramix-transformer';
 // 2e argument = nombre de degrés
 let numberDegrees = process.argv[2];
 
-console.log('vous avez passé', numberDegrees);
-
 numberDegrees = parseInt(numberDegrees);
+
+console.log('vous avez passé', numberDegrees);
 
 if (numberDegrees < 0) {
     console.log("Le nombre doit être positif");
