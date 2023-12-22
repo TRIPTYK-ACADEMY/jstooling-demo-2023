@@ -52,5 +52,27 @@ symbole bleu sur npm => types
 symbole vide => types installable avec @types/
 pas de symbole, pas de typage pour le package.
 
+## Bun
 
+Très rapide.
+Run time, c'est à dire que l'on peut remplacer node par bun. Avec certaines instabilités vu que c'est nouveau.
+
+```
+bun install
+bun add <lepackage>
+```
+
+## PNPM
+
+Installation
+
+```
+volta install pnpm
+```
+
+### Ajouter un package
+
+```
+pnpm add <lepackage>
+```
 
