@@ -1,0 +1,35 @@
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..f6e1d59217c5a9a7b520c5b78336c519ca2360f1
+--- /dev/null
++++ b/.vscode/settings.json
+@@ -0,0 +1,6 @@
++{
++    "eslint.validate": [
++        "glimmer-ts",
++        "glimmer-js"
++    ]
++}
+\ No newline at end of file
+diff --git a/lib/image/morphology/dilate.js b/lib/image/morphology/dilate.js
+index 874d2d9e5c2ede7769283ca62b484deeb471e2ad..c4ad8632a80bba51074864298a99435547793782 100644
+--- a/lib/image/morphology/dilate.js
++++ b/lib/image/morphology/dilate.js
+@@ -24,6 +24,17 @@ function dilate(options = {}) {
+     kernel = [[1, 1, 1], [1, 1, 1], [1, 1, 1]],
+     iterations = 1
+   } = options;
++
++  if (kernel[0].some((v) => v > 1)) {
++    throw new Error("Matrice # 1 : La matrice ne doit pas être supérieure à 1");
++  }
++  if (kernel[1].some((v) => v > 1)) {
++    throw new Error("Matrice # 2 : La matrice ne doit pas être supérieure à 1");
++  }
++  if (kernel[2].some((v) => v > 1)) {
++    throw new Error("Matrice # 3 : La matrice ne doit pas être supérieure à 1");
++  }
++
+   this.checkProcessable('dilate', {
+     bitDepth: [1, 8, 16],
+     components: 1,

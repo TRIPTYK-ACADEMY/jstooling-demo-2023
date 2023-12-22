@@ -12,5 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "image-js": "^0.35.5"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "image-js@0.35.5": "patches/image-js@0.35.5.patch"
+    }
   }
 }

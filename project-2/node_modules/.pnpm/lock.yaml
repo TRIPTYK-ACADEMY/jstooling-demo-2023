@@ -4,10 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  image-js@0.35.5:
+    hash: al5udpbh6tmvmrs5pmigufy2oe
+    path: patches/image-js@0.35.5.patch
+
 dependencies:
   image-js:
     specifier: ^0.35.5
-    version: 0.35.5
+    version: 0.35.5(patch_hash=al5udpbh6tmvmrs5pmigufy2oe)
 
 packages:
 
@@ -74,7 +79,7 @@ packages:
     resolution: {integrity: sha512-RDKhzgQTQfMaLvIFhjahU+2gGnRBK6dYOd5Gd9BzkmnBneOCRYjRC003RIMrdAbH52+l+CnMS4bBCXGer8tEhg==}
     dev: false
 
-  /image-js@0.35.5:
+  /image-js@0.35.5(patch_hash=al5udpbh6tmvmrs5pmigufy2oe):
     resolution: {integrity: sha512-JCtn+ggFG6qkVaKZkJDnMMLO6Xg9/WVDK+BIWcXHwT+XEdu8dzp/nlYzB5opxBkIoitWB2GGYRpF69WQmucJhQ==}
     engines: {node: '>= 12.0.0'}
     dependencies:
@@ -104,6 +109,7 @@ packages:
       tiff: 5.0.3
       web-worker-manager: 0.2.0
     dev: false
+    patched: true
 
   /image-type@4.1.0:
     resolution: {integrity: sha512-CFJMJ8QK8lJvRlTCEgarL4ro6hfDQKif2HjSvYCdQZESaIPV4v9imrf7BQHK+sQeTeNeMpWciR9hyC/g8ybXEg==}
