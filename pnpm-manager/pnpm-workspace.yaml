@@ -1,0 +1,4 @@
+packages:
+  # attention à l'indentation
+  - dramix-*
+  # étoile: va chercher tous les dossiers commençant par dramix-

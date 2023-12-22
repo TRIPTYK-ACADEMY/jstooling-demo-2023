@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dramix-transformer": "link:../dramix-transformer"
+    "dramix-transformer": "workspace:*"
   }
 }
