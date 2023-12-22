@@ -9,9 +9,19 @@ import { transformImageDramix } from 'dramix-transformer';
 // si le nombre est négatif, déclenche une erreur
 
 // process.argv => arguments passés au programme
-console.log(process.argv);
+// 2e argument = nombre de degrés
+let numberDegrees = process.argv[2];
 
-transformImageDramix(50)
+console.log('vous avez passé', numberDegrees);
+
+numberDegrees = parseInt(numberDegrees);
+
+if (numberDegrees < 0) {
+    console.log("Le nombre doit être positif");
+    process.exit(1);
+}
+
+transformImageDramix(numberDegrees)
     // une fois que la fonction est exécutée, on affiche un succès
     .then(() => console.log('Dilation de Dramix avec succès'))
     // si il y'a une erreur, on affiche une erreur
